@@ -1,4 +1,4 @@
-FROM centos:8
+FROM ubi8
 #RUN dnf update -y
 #RUN dnf upgrade -y
 #RUN dnf install epel-release -y
