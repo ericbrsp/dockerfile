@@ -1,6 +1,7 @@
-FROM centos:latest
-MAINTAINER Orizon-Devops-Eric Gonçalves
-RUN yum -y install httpd
-COPY ./front/html /var/www/html/
-ENTRYPOINT [ "/usr/sbin/httpd", "-D", "FOREGROUND"]
+FROM centos:8
+RUN dnf update -y
+RUN dnf upgrade -y
+RUN dnf install epel-release -y
+RUN dnf install nginx -y
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
