@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: pipe-dockerfile
-  name: ''
+  name: app-dockerfile
   annotations: {}
 spec:
   selector:
